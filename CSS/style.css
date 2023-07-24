@@ -1,0 +1,295 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables (not used in these project but good practice and maintainability of code) */
+:root {
+    --navbar-height: 60px;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    top: 0px;
+    left: 0px;
+}
+
+/* Navigation Bar: Logo and image */
+#logo {
+    margin: 5px 16px;
+}
+
+#logo img {
+    margin: 10px 25px;
+    height: 60px;
+}
+#logo img:hover{
+    cursor: pointer;
+}
+
+/* Navigation Bar: List items styling */
+#navbar ul {
+    display: flex;
+    font-family: 'Bree Serif', serif;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    margin: 0px 8px;
+    padding: 3px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 460px;
+}
+
+#home::before {
+    content: "";
+    background: url('../img/bg4.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.99;
+}
+
+#home h1 {
+    color: black;
+    text-align: center;
+}
+
+#home span::before {
+    content: "Hungry?";
+    color: rgb(156, 119, 71);
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: bolder 1000;
+    animation: animate infinite 13s;
+    padding: 5px;
+    letter-spacing: -.45px;
+    font-family: 'Bree Serif', serif;
+}
+
+@keyframes animate {
+    0% {
+        content: "Late Night at Office?";
+    }
+
+    25% {
+        content: "Unexpected Guests?";
+    }
+
+    50% {
+        content: "Cooking gone wrong?";
+    }
+
+    75% {
+        content: "Game Night?";
+    }
+}
+
+#home p {
+    color: black;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 5px;
+    font-family: 'Bree Serif', serif;
+    font-weight: 200;
+}
+
+/* Services Section */
+#services {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#services .box {
+    border: 3px solid brown;
+    padding: 34px;
+    margin: 3px 8px;
+    border-radius: 28px;
+    background-color: #f4f0e8;
+}
+#services .box img {
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+#services .box p {
+    color: black;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 5px;
+    font-family: 'Bree Serif', serif;
+    font-weight: 200;
+}
+
+/* Clients Section */
+#client-section {
+    height: 300px;
+    position: relative;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../img/bg8.avif') no-repeat center center/cover;
+    width: 100%;
+    height: 260px;
+    z-index: -1;
+    opacity: 0.5;
+    margin: 20px 0px;
+    padding: 20px 0px;
+}
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* #more-clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+#clients img{
+    height: 60px;
+    padding: 34px;
+    margin: 10px;
+}
+/* #more-clients img{
+    height: 60px;
+    padding: 34px;
+    margin: 10px;
+} */
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 92%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background: url('../img/contact-3.jpg') no-repeat  center center/cover;
+    margin: 20px 0px;
+    padding: 20px 0px;
+}
+.contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+.contact-box input, .contact-box textarea{
+    width: 100%;
+    padding: 0.1rem;
+    margin: 3px;
+    border-radius: 9px;
+    font-size: 0.9rem;
+}
+.contact-box form{
+    width: 30%;
+}
+.contact-box label{
+    font-size: 1.25rem;
+    font-family: 'Bree Serif', serif;
+}
+
+footer{
+    background: white;
+    color: black;
+    padding: 4px;
+}
+
+/* Utility Classes (not used in these project but good practice and maintainability of code)  */
+.h-primary {
+    font-size: 4rem;
+    padding: 20px;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-secondary {
+    font-size: 3.2rem;
+    padding-top: 139px;
+    padding-bottom: 8px;
+    font-family: 'Bree Serif', serif;
+}
+.h-fifth {
+    font-size: 3.2rem;
+    padding-top: 80px;
+    padding-bottom: 8px;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-quaternary {
+    font-size: 3.2rem;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-tertiary {
+    font-size: 2.4rem;
+    padding: 14px;
+    font-family: 'Bree Serif', serif;
+}
+
+.btn {
+    margin: 14px;
+    padding: 8px 20px;
+    border: 2px solid black;
+    color: rgb(87, 87, 157);
+    background-color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    color: rgb(87, 87, 157);
+    background-color: rgb(238, 230, 221);
+}
+
+.center {
+    text-align: center;
+}
